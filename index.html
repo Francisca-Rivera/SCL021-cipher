@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="file:///C:/Users/fran/Documents/cipher-fran/SCL021-cipher/fondo-pagina-web/index2.html"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>Cipher Fran</title>
-</head>
-<body>
-    <h1>Cifrado César</h1>
-</body>
+  </head>
+  <body>
+    <h1>Mensajería Secreta</h1>
+    <hr />
+    <h3>MENSAJE:</h3>
+    <p>
+      <input type="text" id="mensaje" placeholder="Pon tu mensaje aquí" />
+    </p>
+    <h3>DESPLAZAMIENTO:</h3>
+    <p>
+      <input
+        type="number"
+        id="desplazamiento"
+        size="4"
+        placeholder="Cuánto quieres que se desplace"
+      />
+    </p>
+    <p>
+      <button type="button" id="encode">Cifrar</button>
+      <button type="button" id="decode">Descifrar</button>
+    </p>
+    <h3>MENSAJE CIFRADO/DESCIFRADO:</h3>
+    <p>
+      <input
+        type="text"
+        id="mensaje2"
+        placeholder="Listo tu mensaje cifrado/descifrado"
+      />
+    </p>
+    <script src="./app.js"></script>
+  </body>
 </html>
