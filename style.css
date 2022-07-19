@@ -23,6 +23,12 @@ input {
   font-size: 16px;
 }
 
+.footer,
+h4 {
+  text-align: center;
+  color: whitesmoke;
+}
+
 /*body:before {
   content: '';
   width: 100%;
