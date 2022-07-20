@@ -1,3 +1,4 @@
+import cipher from './cipher.js';
 window.addEventListener('load', inicio, true); //es una función para asociar un evento a un input en HTML, puedo colocar esta función.
 //function inicio, es para asignar a cada uno de los eventos que se van a producir, el escuchador correspondiente.
 //LLamar a las funciones.
@@ -12,12 +13,12 @@ function inicio() {
     true //bubbling phase
   );
   //click en el botón cifrar, llamará a una función.
-  document.getElementById('encode').addEventListener(
+  document.getElementById('cifrar').addEventListener(
     'click',
     function () {
       let texto = document.getElementById('mensaje').value; //para sacar el valor del texto de mensaje.
       let desplazamiento = document.getElementById('desplazamiento').value; //para sacar el valor de desplazamiento.
-      document.getElementById('mensaje2').value = encode2(
+      document.getElementById('mensaje2').value = cipher.encode(
         texto,
         desplazamiento
       ); //para escribir mensaje en el input encode
@@ -25,18 +26,21 @@ function inicio() {
     true
   );
   //igual que la función encode.
-  document.getElementById('decode').addEventListener(
+  document.getElementById('decifrar').addEventListener(
     'click',
     function () {
       let texto = document.getElementById('mensaje').value;
       let desplazamiento = document.getElementById('desplazamiento').value;
-      document.getElementById('mensaje2').value = decode(texto, desplazamiento); //para escribir mensaje en el input decode
+      document.getElementById('mensaje2').value = cipher.decode(
+        texto,
+        desplazamiento
+      ); //para escribir mensaje en el input decode
     },
     true
   );
 }
 //función encode
-function encode(texto, desplazamiento) {
+/*function encode(texto, desplazamiento) {
   let resultado = ''; //funcion que devuelve el resultado mensaje2 al input mensaje cifrado/desifrado.
   const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; //cadena con el abecedario
   //operación módulo
@@ -57,8 +61,11 @@ function encode(texto, desplazamiento) {
   }
   return resultado;
 }
+
+console.log(cipher);*/
+
 //funcion encode
-function encode2(texto, desplazamiento) {
+/*function encode(texto, desplazamiento) {
   if (!texto) return ''; //función vacía
   const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   desplazamiento = ((desplazamiento % 26) + 26) % 26;
@@ -67,11 +74,11 @@ function encode2(texto, desplazamiento) {
     /[A-Z]/gi,
     /*c=> recorerá la cadena 1 a 1 las letas de la cadena A-Z dentro de texto
     para cada una de las letras comprobar su posición y se le añade el desplazamiento*/
-    (c) => letras[(letras.indexOf(c) + desplazamiento) % 26]
+/*(c) => letras[(letras.indexOf(c) + desplazamiento) % 26]
   );
-}
+}*/
 //funcion decode
-function decode(texto, desplazamiento) {
+/*function decode(texto, desplazamiento) {
   if (!texto) return '';
   const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   desplazamiento = ((desplazamiento % 26) - 26) % 26;
@@ -79,4 +86,4 @@ function decode(texto, desplazamiento) {
     /[A-Z]/gi,
     (c) => letras[(letras.indexOf(c) - desplazamiento) % 26]
   );
-}
+}*/
