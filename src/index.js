@@ -31,7 +31,6 @@ function inicio() {
     function () {
       let texto = document.getElementById('mensaje').value;
       let desplazamiento = document.getElementById('desplazamiento').value;
-      console.log(cipher.decode(texto, desplazamiento));
       document.getElementById('mensaje2').value = cipher.decode(
         texto,
         desplazamiento
@@ -40,51 +39,3 @@ function inicio() {
     true
   );
 }
-//función encode
-/*function encode(texto, desplazamiento) {
-  let resultado = ''; //funcion que devuelve el resultado mensaje2 al input mensaje cifrado/desifrado.
-  const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; //cadena con el abecedario
-  //operación módulo
-  desplazamiento = ((desplazamiento % 26) + 26) % 26;
-  //para recorrer la cadena e ir rotando cada letra
-  if (texto) {
-    //for es un ciclo
-    for (let i = 0; i < texto.length; i++) {
-      //si encuentra un caracter o un espacio, lo devolverá tal cual
-      if (letras.indexOf(texto[i]) != -1) {
-        //para guardar la posicion de una letra dentro de la cadena
-        let posicion = (letras.indexOf(texto[i]) + desplazamiento) % 26;
-        //aquí se guardará cada letra nueva rotada, correspodiente a cada una de las posiciones.
-        resultado += letras[posicion];
-        //retornará caracteres y numeros en caso de haberlos
-      } else resultado += texto[i];
-    }
-  }
-  return resultado;
-}
-
-console.log(cipher);*/
-
-//funcion encode
-/*function encode(texto, desplazamiento) {
-  if (!texto) return ''; //función vacía
-  const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  desplazamiento = ((desplazamiento % 26) + 26) % 26;
-  //replace le pasamos la cadena y le indicamos que queremos hacer con cada letra
-  return texto.replace(
-    /[A-Z]/gi,
-    /*c=> recorerá la cadena 1 a 1 las letas de la cadena A-Z dentro de texto
-    para cada una de las letras comprobar su posición y se le añade el desplazamiento*/
-/*(c) => letras[(letras.indexOf(c) + desplazamiento) % 26]
-  );
-}*/
-//funcion decode
-/*function decode(texto, desplazamiento) {
-  if (!texto) return '';
-  const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  desplazamiento = ((desplazamiento % 26) - 26) % 26;
-  return texto.replace(
-    /[A-Z]/gi,
-    (c) => letras[(letras.indexOf(c) - desplazamiento) % 26]
-  );
-}*/

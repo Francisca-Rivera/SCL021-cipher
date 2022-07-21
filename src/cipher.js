@@ -1,5 +1,5 @@
 const cipher = {
-  encode: function (desplazamiento, texto) {
+  encode: function (texto, desplazamiento) {
     if (
       texto === '' ||
       desplazamiento === 'null' ||
@@ -16,7 +16,7 @@ const cipher = {
     );
   },
 
-  decode: function (desplazamiento, texto) {
+  decode: function (texto, desplazamiento) {
     if (
       texto === '' ||
       desplazamiento === 'null' ||
