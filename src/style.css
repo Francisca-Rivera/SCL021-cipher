@@ -1,6 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika&family=Courgette&family=Fira+Mono&family=Overlock&display=swap');
+
+:root {
+  --fontTitle: 'Andika', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: mistyrose;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--fontTitle);
+  font-size: 5rem;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10%;
+}
+
+.subtitle {
+  padding: 5%;
+}
+h2 {
+  font-family: var(--fontTitle);
 }
 
 h3,
@@ -9,22 +39,37 @@ input {
   font-family: 'Arial', sans-serif;
   text-align: center;
   color: black;
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-input {
+.input-content {
   font-family: 'Digital', sans-serif;
-  font-size: 1.5em;
+  font-size: 2rem;
   background-color: white;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
 }
 
 ::placeholder {
-  font-size: 16px;
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-start;
+}
+button {
+  font-family: 'Arial', sans-serif;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.footer {
+  align-items: flex-end;
 }
 
 .footer,
 h4 {
   text-align: center;
-  color: whitesmoke;
+  color: #d3d3d3;
 }

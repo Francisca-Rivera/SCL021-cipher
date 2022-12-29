@@ -8,41 +8,51 @@
     <title>Cipher Fran</title>
   </head>
   <body>
-    <h1>Mensajería Secreta</h1>
-    <hr />
-    <h3>
-      Si buscas la manera de codificar un mensaje, estás en el lugar correcto
-    </h3>
-    <hr />
-    <h3>Mensaje:</h3>
-    <div>
-      <input type="text" id="mensaje" placeholder="Pon tu mensaje aquí" />
-    </div>
-    <h3>Desplazamiento:</h3>
-    <div>
-      <input
-        type="number"
-        id="desplazamiento"
-        size="4"
-        placeholder="Cuánto quieres que se desplace"
-      />
-    </div>
-    <div>
-      <button type="button" id="cifrar">Cifrar</button>
-      <button type="button" id="decifrar">Descifrar</button>
-    </div>
-    <h3>Mensaje Cifrado/Descifrado:</h3>
-    <div>
-      <input
-        type="text"
-        id="mensaje2"
-        placeholder="Listo tu mensaje cifrado/descifrado"
-      />
-    </div>
-    <br />
-    <hr />
+    <header class="content">
+      <div class="video">
+        <video src="vhs-video.mp4" autoplay loop></video>
+      </div>
+      <div class="title">
+        <h1>Mensajería Secreta</h1>
+      </div>
+      <hr />
+      <div class="subtitle">
+        <h2>
+          Si buscas la manera de codificar un mensaje, estás en el lugar
+          correcto.
+          <br />
+          En esta página web podrás mandar o recibir mensajes codificados para
+          que puedas hablar con tus amigos con sus códigos ocultos...
+        </h2>
+      </div>
+    </header>
+    <section class="input-content">
+      <div>
+        <h3>Mensaje:</h3>
+        <input type="text" id="message" placeholder="Pon tu mensaje aquí" />
+      </div>
+      <h3>Desplazamiento:</h3>
+      <div>
+        <input
+          type="number"
+          id="displacement"
+          size="4"
+          placeholder="Coloca un número"
+        />
+      </div>
+      <div>
+        <button type="button" id="encode">Cifrar</button>
+        <button type="button" id="decode">Descifrar</button>
+      </div>
+      <h3>Mensaje Cifrado/Descifrado:</h3>
+      <div>
+        <input type="text" id="message2" placeholder="¡Listo tu mensaje!" />
+      </div>
+      <br />
+      <hr />
+    </section>
     <footer>
-      <h4>Francisca Rivera - Todos los derechos reservados</h4>
+      <h4>Francisca Rivera ©️Todos los derechos reservados</h4>
     </footer>
     <script src="./index.js" type="module"></script>
   </body>

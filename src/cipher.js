@@ -1,35 +1,35 @@
 const cipher = {
-  encode: function (texto, desplazamiento) {
+  encode: function (text, displacement) {
     if (
-      texto === '' ||
-      desplazamiento === 'null' ||
-      texto.length === 0 ||
-      desplazamiento === 0
+      text === '' ||
+      displacement === 'null' ||
+      text.length === 0 ||
+      displacement === 0
     ) {
       throw new TypeError();
     }
-    const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    desplazamiento = ((desplazamiento % 26) + 26) % 26;
-    return texto.replace(
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    displacement = ((displacement % 26) + 26) % 26;
+    return text.replace(
       /[A-Z]/gi,
-      (c) => letras[(letras.indexOf(c) + desplazamiento) % 26]
+      (c) => letters[(letters.indexOf(c) + displacement) % 26]
     );
   },
 
-  decode: function (texto, desplazamiento) {
+  decode: function (text, displacement) {
     if (
-      texto === '' ||
-      desplazamiento === 'null' ||
-      texto.length === 0 ||
-      desplazamiento === 0
+      text === '' ||
+      displacement === 'null' ||
+      text.length === 0 ||
+      displacement === 0
     ) {
       throw new TypeError();
     }
-    const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    desplazamiento = ((desplazamiento % 26) - 26) % 26;
-    return texto.replace(
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    displacement = ((displacement % 26) - 26) % 26;
+    return text.replace(
       /[A-Z]/gi,
-      (c) => letras[(letras.indexOf(c) - desplazamiento) % 26]
+      (c) => letters[(letters.indexOf(c) - displacement) % 26]
     );
   },
 };
