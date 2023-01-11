@@ -39,3 +39,13 @@ function start() {
     true
   );
 }
+
+const $contentCopy = document.getElementById('message2'),
+  $buttonCopy = document.getElementById('buttonCopy');
+
+$buttonCopy.addEventListener('click', (e) => {
+  $contentCopy.select();
+  document.execCommand('copy');
+
+  $buttonCopy.innerHTML = '¡Copiado!';
+});
