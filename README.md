@@ -10,4 +10,4 @@ Es una aplicación diseñada para cifrar y decifrar textos mediante el método c
 
 Está compuesta por un HTML, además de un JS y un CSS. El index.html es la página para que el usuario escriba su mensaje para cifrarlo y/o decifrarlo, hay una sección para seleccionar el desplazamiento con números, un botón con la función de cirfrar el mensaje, otro para decifrar el mensaje y abajo hay un espacio en el que aparece el mensaje cifrado y/o descifrado. Tiene colores minimalistas y estilizados. 
 
-[![Cuerpo-Web.png](https://i.postimg.cc/BQzP1xVk/Cuerpo-Web.png)](https://postimg.cc/hf9tk7g1)
+[![Cuerpo-Web.png](https://i.postimg.cc/255kb8hZ/Cuerpo-Web.png)](https://postimg.cc/yDw42Kf1)
